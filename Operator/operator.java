@@ -1,27 +1,31 @@
 class Operators {
     public static void main(String args[]) {
-         Boolean haveJob = false;
-    Boolean lookingForWork = true;
-    Boolean canProgram = false;
-    int currentSavings = 500;
+      
+      
+      
+        //      Boolean haveJob = false;
+        // Boolean lookingForWork = true;
+        // Boolean canProgram = false;
+        // int currentSavings = 500;
 
-    //There are some print statements below. Can you guess which ones will print?
-    if(!haveJob) {
-        if(lookingForWork && canProgram) {
-            System.out.println("Your chances as getting a job go up!");
-        }
-        else {
-            System.out.println("You might need to gain more skills before you can get a job.");
-        }
-    }
-    if(currentSavings < 500) {
-        System.out.println("You should be saving more money.");
-    }
-    else {
-        System.out.println("Do you need to save more money, still?");
-    }
+        // //There are some print statements below. Can you guess which ones will print?
+        // if(!haveJob) {
+        //     if(lookingForWork && canProgram) {
+        //         System.out.println("Your chances as getting a job go up!");
+        //     }
+        //     else {
+        //         System.out.println("You might need to gain more skills before you can get a job.");
+        //     }
+        // }
+        // if(currentSavings < 500) {
+        //     System.out.println("You should be saving more money.");
+        // }
+        // else {
+        //     System.out.println("Do you need to save more money, still?");
+        // }
         
         
+      
         // double bitcoinsOwned = .000001;
         // double bcsCoinsOwned = 2;
 

@@ -1,9 +1,29 @@
 class Operators {
     public static void main(String args[]) {
     
-    
-    
-    
+    String box = "box";
+    String in = "in";
+    String above = "above";
+    String charles = "charles";
+    String inside = "inside";
+    String below = "below";
+    String car = "car";
+    String the = "the";
+    String is = "is";
+    String trevor = "trevor";
+    String a = "a";
+    String why = "why";
+    String because = "because";
+    String when = "when";
+    String nerd = "nerd";
+        String sentence1 = trevor + " " + is + " " + a + " " + nerd + "!!!!";
+        System.out.println(sentence1);
+
+        String sentence2 = the + " " + box + " " + is + " " + in + " " + the + " " + car + ".";
+        System.out.println(sentence2);
+
+        String sentence3 = why + " " + is + " " + trevor + " " + in + " " + the + " " + box + "?";
+        System.out.println(sentence3); 
     
     //Code to calculate number of months to reach goal money   
         // int targetSavingsGoal = 2000;

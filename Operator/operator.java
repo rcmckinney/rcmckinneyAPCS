@@ -10,7 +10,7 @@ class Operators {
         //     System.out.println("Success");
         // }
         // else {
-        //     System.out.println("being single means i can have more money");
+        //     System.out.println("being single means I can have more money!");
         // }
         // if(hasMoney | hasJob) {
         //     System.out.println("Woohoo!?");

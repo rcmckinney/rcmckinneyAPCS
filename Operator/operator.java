@@ -14,7 +14,7 @@ class Operators {
         // else {
         //     System.out.println("being single means I can have more money!");
         // }
-        // if(hasMoney | hasJob) {
+        // if(hasMoney || hasJob) {
         //     System.out.println("Woohoo!?");
         // }
         // else {
@@ -24,7 +24,7 @@ class Operators {
     //Code to generate sentences 
         // String box = "box";
         // String in = "in";
-        // String above = "above";
+        // String above = "above";```````````
         // String charles = "charles";
         // String inside = "inside";
         // String below = "below";

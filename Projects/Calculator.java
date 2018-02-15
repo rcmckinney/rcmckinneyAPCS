@@ -23,7 +23,13 @@ public class Calculator{
         System.out.println("You selected mode " + mode);
 
         if(mode == 1) {
-            flatInterest();
+
+            while(true) {   
+                flatInterest();
+                scan = new Scanner(System.in);
+                System.out.print("Enter the amount of your loan: ");
+                scan.hasNextInt();
+            }
         }
         else {
             System.out.println("Other modes not yet supported."); //Replace this with calls to your appropriate functions            
@@ -31,8 +37,7 @@ public class Calculator{
     }
 
     public static void flatInterest() {
-        System.out.println("Still a stub function. Not yet implemented"); //Delete this once you implement the function
-        //Calculate flat interest and print it out here
+       double interest = loanAmt * interestRate; //need to finish
     }
 
     public static void printModeStatement() {

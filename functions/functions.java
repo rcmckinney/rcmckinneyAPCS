@@ -23,19 +23,41 @@ class Functions{
     //     return true;
     // }
 
+    //     public static void main(String args[]) {
+    //     System.out.print("Enter an int: ");
+    //     Scanner scan = new Scanner(System.in);
+    //     if(isValidInt(scan)) {
+    //         System.out.println("Int Success!");
+    //     }     
+        
+    //     else {
+    //         System.out.println("Int failure!" );
+    //     }
+
+    // }
+    // public static Boolean isValidInt(Scanner scan) {
+    //     try {
+    //         String s = scan.nextLine();
+    //     }
+    //     catch(Exception e) {
+    //         return false;
+    //     }
+    //     return true;
+    // }
+
         public static void main(String args[]) {
-        System.out.print("Enter an int: ");
+        System.out.print("Enter a double: ");
         Scanner scan = new Scanner(System.in);
-        if(isValidInt(scan)) {
-            System.out.println("Int Success!");
+        if(isValidDouble(scan)) {
+            System.out.println("Double Success!");
         }     
         
         else {
-            System.out.println("Int failure!" );
+            System.out.println("Double failure!" );
         }
 
     }
-    public static Boolean isValidInt(Scanner scan) {
+    public static Boolean isValidDouble(Scanner scan) {
         try {
             String s = scan.nextLine();
         }

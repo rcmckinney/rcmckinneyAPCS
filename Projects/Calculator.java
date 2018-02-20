@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Calculator{
-    public static int mode = -1;
+    public static int mode = -1; 
     public static double loanAmt = -1;
     public static int loanTerm = -1;
     public static double interestRate = -1;
@@ -23,13 +23,7 @@ public class Calculator{
         System.out.println("You selected mode " + mode);
 
         if(mode == 1) {
-
-            while(true) {   
-                flatInterest();
-                scan = new Scanner(System.in);
-                System.out.print("Enter the amount of your loan: ");
-                scan.hasNextInt();
-            }
+            flatInterest();
         }
         else {
             System.out.println("Other modes not yet supported."); //Replace this with calls to your appropriate functions            
@@ -37,7 +31,41 @@ public class Calculator{
     }
 
     public static void flatInterest() {
-       double interest = loanAmt * interestRate; //need to finish
+       while(true){
+           System.out.print("Enter the Amount of the Loan: ");
+           Scanner scan;
+           scan = new Scanner(System.in);
+           if(scan.hasNextDouble()){
+               loanAmt = scan.nextDouble();
+               if(loanAmt > 0) {
+                   break;
+               }
+           }
+       }
+       while(true){
+           System.out.print("Enter the term of your loan (years): ");
+           Scanner scan;
+           scan = new Scaneer(System.in);
+           if(scan.hasNextInt()){
+               loanTerm = scan.nextInt();
+               if(loanTerm > 0){
+                   break;
+               }
+           }
+       }
+       while(true){
+           System.out.print("Enter interest rate (%): ");
+            Scanner scan;
+            scan = new Scanner(System.in);
+            if(scan.hasNextDouble()){
+                interestRate = scan.nextDouble();
+                if(interestRate > 0){
+                    break;
+                }
+            }
+       }
+        interest = (loanAmt*loanTerm*interestRate)/100;
+        
     }
 
     public static void printModeStatement() {

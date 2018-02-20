@@ -25,8 +25,8 @@ public class Calculator{
         if(mode == 1) {
             flatInterest();
         }
-        else {
-            System.out.println("Other modes not yet supported."); //Replace this with calls to your appropriate functions            
+        if(mode == 2) {
+            compoundNoPay();
         }
     }
 
@@ -45,7 +45,7 @@ public class Calculator{
        while(true){
            System.out.print("Enter the term of your loan (years): ");
            Scanner scan;
-           scan = new Scaneer(System.in);
+           scan = new Scanner(System.in);
            if(scan.hasNextInt()){
                loanTerm = scan.nextInt();
                if(loanTerm > 0){
@@ -64,7 +64,19 @@ public class Calculator{
                 }
             }
        }
-        interest = (loanAmt*loanTerm*interestRate)/100;
+        double interest = (loanAmt * loanTerm * interestRate)/100;
+        double totalPayment = (interest + loanAmt);
+        System.out.println(
+            "Original loan amount: $" + loanAmt);
+        System.out.println(
+            "Loan Term: " + loanTerm + " years");
+        System.out.println(
+            "Interest Rate: " + interestRate + " %");
+        System.out.println(
+            "Interest to be paid: $" + interest);
+        System.out.println(
+            "Total amount of loan: $" + totalPayment);
+
         
     }
 
@@ -75,5 +87,41 @@ public class Calculator{
             + "(2) Compounding Interest Without Monthly Payments\n"
             + "(3) Compounding Interest With Monthly Payments\n"
         );
+    }
+
+    public static void compoundNoPay() {
+        while(true){
+            System.out.print("Enter the amount of your loan: ");
+            Scanner scan;
+            scan = new Scanner(System.in);
+            if(scan.hasNextDouble()){
+                loanAmt = scan.nextDouble();
+                if(loanAmt > 0){
+                    break;
+                }
+            }
+        }
+         while(true){
+            System.out.print("Enter the term of your loan (years): ");
+            Scanner scan;
+            scan = new Scanner(System.in);
+            if(scan.hasNextInt()){
+                loanTerm = scan.nextInt();
+                if(loanTerm > 0){
+                    break;
+                }
+            }
+        }
+         while(true){
+            System.out.print("Enter the interest on your loan (%): ");
+            Scanner scan;
+            scan = new Scanner(System.in);
+            if(scan.hasNextDouble()){
+                interestRate = scan.nextDouble();
+                if(interestRate > 0){
+                    break;
+                }
+            }
+        }
     }
 }

@@ -64,11 +64,10 @@ public class Loops{
         //     System.out.println(n);
         //     n += 3;
         // }
-
-        char aplha = 'a'; // Need to fix, won't compile
-        while(alpha <= z){
-            System.out.println(alpha);
-            alpha++;
+        char alpha = 'a';
+        while(alpha <= 'z') {
+        System.out.println(alpha); //Prints 'a'
+        alpha++;
         }
     }
 }

@@ -107,5 +107,10 @@ public class Loops{
         // for(int i = 2; i<=1024; i*=2) {
         //     System.out.println(i);
         // }
+
+        char alpha = ' ';
+        for(alpha = ' '; alpha <= 126; alpha += 1) {
+            System.out.println(alpha);
+        }
     }
 }

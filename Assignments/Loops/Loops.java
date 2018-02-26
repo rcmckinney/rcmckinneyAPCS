@@ -64,10 +64,48 @@ public class Loops{
         //     System.out.println(n);
         //     n += 3;
         // }
-        char alpha = 'a';
-        while(alpha <= 'z') {
-        System.out.println(alpha); //Prints 'a'
-        alpha++;
-        }
+
+        // char alpha = 'a';
+        // while(alpha <= 'z') {
+        // System.out.println(alpha); //Prints 'a'
+        // alpha++;
+        // }
+
+        // for(int i = 0; i <= 100; i += 2) {
+        //     System.out.println(i);
+        // }
+
+        // for(int i = 0; i <= 100; i += 3) {
+        //     if(i % 2 == 0) {
+        //         System.out.println(i + " is an even number");
+        //     }
+        //     else {
+        //         System.out.println(i + " is an odd number");            
+        //     }
+        // }
+
+        // for(int i = 0; i < 1000; i += i) {
+        //     System.out.println(i);
+        // }
+
+        // for(int i = 100; i < 0; i--) {
+        //     System.out.println(i);
+        // }
+
+        // for(int i = 0; i > -100; i--) {
+        //     System.out.println(i);
+        // }
+
+        // for(int i = 0; i < 20; i += 2) {
+        //     System.out.println(i);
+        // }
+
+        // for(int i = 0; i <= 99; i += 3) {
+        //     System.out.println(i);
+        // }
+
+        // for(int i = 2; i<=1024; i*=2) {
+        //     System.out.println(i);
+        // }
     }
 }

@@ -8,8 +8,8 @@ class Plinko {
     public static final int[] VALUES = {1, 3, 2, 0, 5, 0, 2, 3, 1};
 
     public static int mode = -1;
-
-    public static int i = -1;
+    public static int vPosition = -1;
+    public static int hPosition = -1;
 
     public static void main(String[] args) {
         Scanner scan;
@@ -21,7 +21,14 @@ class Plinko {
             if(scan.hasNextInt()) {
                 mode = scan.nextInt();
                 if(mode == SINGLE_DISC) {
-                    singleDisk();
+                    scan = new Scanner(System.in);
+                    System.out.println("What position would you like to drop the disk from? (0-8): ");
+                    if(scan.hasNextInt()) {
+                        vPosition = scan.nextInt();
+                        vPosition = vPosition * 2;
+                        System.out.println(vPosition);
+                    }
+                // for(hPosition = 12; )
                 }
                 else if(mode == MULTI_DISC) {
                     System.out.println("Mode not yet implemented");
@@ -36,28 +43,34 @@ class Plinko {
         }
     }
 
-    public static void singleDisk(){
-        System.out.println("Enter where you would like to drop the disk (0-8): ");
-        Scanner scan;
-        scan = new Scanner(System.in);
-        if(scan.hasNextInt()) {
-            i = scan.hasNextInt();
+    public static void printOddRow(int position) {
+        for(int i = 0; i <= 16; i++) {
+            if(position == i) {
+                System.out.print("O");
+            }
+            else if(isEven(i)) {
+                System.out.print(" ");
+            }
+            else {
+                System.out.print(".");
+            }
         }
+        System.out.print("\n");    
     }
 
-    public static int runOddRow(int position) {
-        //Modify the position.
-        //Print the visualization of the row if it's single disc mode.
-
-        return position;
-    }
-
-    public static int runEvenRow(int position) {
-        //Modify the position.
-        //Print the visualization of the row if it's single disc mode.
-
-        return position;
-    }
+    public static void printEvenRow(int position) {
+        for(int i = 0; i <= 16; i++) {
+            if(position == i) {
+                System.out.print("O");
+            }
+            else if(isEven(i)) {
+                System.out.print(".");
+            }
+            else {
+                System.out.print(" ");
+            }
+        }
+        System.out.print("\n");    }
 
     public static Boolean isEven(int x) {
         return x % 2 == 0;

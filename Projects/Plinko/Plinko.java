@@ -8,10 +8,12 @@ class Plinko {
     public static final int TERMINATE = 3;
 
     public static final int[] VALUES = {1, 3, 2, 0, 5, 0, 2, 3, 1};
+    public static final int[] results = {0,0,0,0,0,0,0,0,0};
 
     public static int mode = -1;
     public static int vPosition = -1;
     public static int hPosition = -1;
+    public static int numOfDisks = -1;
 
     public static void main(String[] args) {
         Scanner scan;
@@ -47,9 +49,47 @@ class Plinko {
                             printEvenRow();
                         }
                     }
+                System.out.println("You landed in position: " + hPosition/2);
+                System.out.println("You scored: " + VALUES[hPosition/2] + " points!");
                 }
                 else if(mode == MULTI_DISC) {
-                    System.out.println("Mode not yet implemented");
+                    System.out.println("How many disks would you like to drop?: ");
+                    if(scan.hasNextInt()) {
+                        numOfDisks = scan.nextInt();
+                    }
+                    System.out.println("Where would you like to drop the disk? (0-8): ");
+                    if(scan.hasNextInt()) {
+                        hPosition = scan.nextInt();
+                        hPosition = hPosition * 2;
+                    }
+                    for(int x = 1; x <= numOfDisks; x++) {
+                        for(vPosition = 12; vPosition >= 0; vPosition--) {
+                            if(hPosition == 16) {
+                                hPosition --;
+                            }
+                            else if(hPosition == 0){
+                                hPosition ++ ;
+                            }
+                            else if(Math.random() > .5){
+                                hPosition ++;
+                            }
+                            else{
+                                hPosition --;
+                            }
+                        }
+                        results[hPosition / 2]++;
+                        VALUES[hPosition / 2]++;
+                    }
+                    System.out.println("You landed in position 1: " + results[0] + " times.");
+                    System.out.println("You landed in position 2: " + results[1] + " times.");
+                    System.out.println("You landed in position 3: " + results[2] + " times.");
+                    System.out.println("You landed in position 4: " + results[3] + " times.");
+                    System.out.println("You landed in position 5: " + results[4] + " times.");
+                    System.out.println("You landed in position 6: " + results[5] + " times.");
+                    System.out.println("You landed in position 7: " + results[6] + " times.");
+                    System.out.println("You landed in position 8: " + results[7] + " times.");
+                    System.out.println("You landed in position 9: " + results[8] + " times.");
+                    System.out.println("Total Score: " + VALUES);
                 }
                 else if(mode == TERMINATE) {
                     System.out.println("Goodbye");

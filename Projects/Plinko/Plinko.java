@@ -8,12 +8,14 @@ class Plinko {
     public static final int TERMINATE = 3;
 
     public static final int[] VALUES = {1, 3, 2, 0, 5, 0, 2, 3, 1};
-    public static final int[] results = {0,0,0,0,0,0,0,0,0};
+    public static int[] results = {0,0,0,0,0,0,0,0,0};
 
     public static int mode = -1;
     public static int vPosition = -1;
     public static int hPosition = -1;
     public static int numOfDisks = -1;
+    public static int totalPointsReal = -1;
+    public static int totalPoints = -1;
 
     public static void main(String[] args) {
         Scanner scan;
@@ -78,8 +80,14 @@ class Plinko {
                             }
                         }
                         results[hPosition / 2]++;
-                        VALUES[hPosition / 2]++;
                     }
+              
+                    for(int x = 0; x <= 8; x++) {
+                        totalPoints= VALUES[x] * results[x];
+                        totalPointsReal = totalPoints + totalPointsReal;
+                    }
+                    totalPointsReal = totalPointsReal + 1;
+
                     System.out.println("You landed in position 1: " + results[0] + " times.");
                     System.out.println("You landed in position 2: " + results[1] + " times.");
                     System.out.println("You landed in position 3: " + results[2] + " times.");
@@ -89,7 +97,16 @@ class Plinko {
                     System.out.println("You landed in position 7: " + results[6] + " times.");
                     System.out.println("You landed in position 8: " + results[7] + " times.");
                     System.out.println("You landed in position 9: " + results[8] + " times.");
-                    System.out.println("Total Score: " + VALUES);
+                    System.out.println("You scored: " + totalPointsReal +" points!");
+                    results[0] = 0;
+                    results[1] = 0;
+                    results[2] = 0;
+                    results[3] = 0;
+                    results[4] = 0;
+                    results[5] = 0;
+                    results[6] = 0;
+                    results[7] = 0;
+                    results[8] = 0;
                 }
                 else if(mode == TERMINATE) {
                     System.out.println("Goodbye");

@@ -1,4 +1,4 @@
 # rcmckinneyAPCS
 
 
-Some changes I made at school
+I put all my skill points into hacking

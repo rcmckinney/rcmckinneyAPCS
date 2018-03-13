@@ -14,8 +14,8 @@ class Plinko {
     public static int vPosition = -1;
     public static int hPosition = -1;
     public static int numOfDisks = -1;
-    public static int totalPointsReal = -1;
-    public static int totalPoints = -1;
+    public static int totalPointsReal = 0;
+    public static int totalPoints = 0;
 
     public static void main(String[] args) {
         Scanner scan;
@@ -86,7 +86,6 @@ class Plinko {
                         totalPoints= VALUES[x] * results[x];
                         totalPointsReal = totalPoints + totalPointsReal;
                     }
-                    totalPointsReal = totalPointsReal + 1;
 
                     System.out.println("You landed in position 1: " + results[0] + " times.");
                     System.out.println("You landed in position 2: " + results[1] + " times.");
@@ -107,6 +106,8 @@ class Plinko {
                     results[6] = 0;
                     results[7] = 0;
                     results[8] = 0;
+                    totalPoints = 0;
+                    totalPointsReal = 0;
                 }
                 else if(mode == TERMINATE) {
                     System.out.println("Goodbye");

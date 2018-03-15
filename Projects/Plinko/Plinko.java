@@ -64,7 +64,9 @@ class Plinko {
                         hPosition = scan.nextInt();
                         hPosition = hPosition * 2;
                     }
+                    int origPosition = hPosition;
                     for(int x = 1; x <= numOfDisks; x++) {
+                        hPosition = origPosition;
                         for(vPosition = 12; vPosition >= 0; vPosition--) {
                             if(hPosition == 16) {
                                 hPosition --;
